@@ -10,11 +10,15 @@ public class Rocket : MonoBehaviour
     public Vector3 startingPosition;
     public GameObject rocket;
     bool playermoving;
+    public GameObject astro;
     // Start is called before the first frame update
     void Start()
     {
         rocketRigidBody = GetComponent<Rigidbody2D>();
-       // rocketMovement = startingPosition;
+        // astro = GetComponent<SpriteRenderer>();
+        // astro.enabled = true;
+        // rocketMovement = startingPosition;
+        astro.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,16 +47,19 @@ public class Rocket : MonoBehaviour
         }
 
         if(other.gameObject.tag == "astro")
-        {
-            other.transform.position = Vector2.MoveTowards(transform.position, gameObject.transform.position, 5f);
-            //  Destroy(other.gameObject);
+         {
+           //  other.transform.position = Vector2.MoveTowards(transform.position, gameObject.transform.position, 5f);
+             Destroy(other.gameObject);
 
             //gameObject.transform.position;
             //gameObject.transform.position = startingPosition;
             // for (int i = 0; i > 0; i++) {
+            // astro.enabled = false;
+            astro.SetActive(true);
+        } 
+        
             
-        }
-      
+        
     }
 
 }  
