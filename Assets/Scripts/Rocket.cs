@@ -39,10 +39,13 @@ public class Rocket : MonoBehaviour
             gameObject.transform.position = startingPosition;
         }
 
-        if(other.gameObject.tag == "astro")
+      /*  if(other.gameObject.tag == "astro")
         {
-          //  GetComponent
+            other.transform.position = gameObject.transform.translate;
+                //gameObject.transform.position;
+            //gameObject.transform.position = startingPosition;
         }
+      */
     }
 
 }  
