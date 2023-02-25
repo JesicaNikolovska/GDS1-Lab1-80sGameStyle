@@ -8,6 +8,7 @@ public class Rocket : MonoBehaviour
     private Vector2 rocketMovement;
     public float rocketSpeed;
     public Vector3 startingPosition;
+    public GameObject rocket;
     bool playermoving;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,8 @@ public class Rocket : MonoBehaviour
         rocketMovement.y = Input.GetAxis("Vertical") * rocketSpeed;
         rocketMovement.x = Input.GetAxis("Horizontal") * rocketSpeed;
         
+        
+        
 
 
     }
@@ -29,7 +32,7 @@ public class Rocket : MonoBehaviour
     private void FixedUpdate()
     {
 
-          transform.position = transform.position + new Vector3(rocketMovement.x * Time.deltaTime, rocketMovement.y * Time.deltaTime,0);
+          rocket.transform.position = transform.position + new Vector3(rocketMovement.x * Time.deltaTime, rocketMovement.y * Time.deltaTime,0);
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -39,13 +42,17 @@ public class Rocket : MonoBehaviour
             gameObject.transform.position = startingPosition;
         }
 
-      /*  if(other.gameObject.tag == "astro")
+        if(other.gameObject.tag == "astro")
         {
-            other.transform.position = gameObject.transform.translate;
-                //gameObject.transform.position;
+            other.transform.position = Vector2.MoveTowards(transform.position, gameObject.transform.position, 5f);
+            //  Destroy(other.gameObject);
+
+            //gameObject.transform.position;
             //gameObject.transform.position = startingPosition;
+            // for (int i = 0; i > 0; i++) {
+            
         }
-      */
+      
     }
 
 }  
