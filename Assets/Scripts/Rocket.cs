@@ -7,13 +7,13 @@ public class Rocket : MonoBehaviour
     public Rigidbody2D rocketRigidBody;
     private Vector2 rocketMovement;
     public float rocketSpeed;
-    
+    public Vector3 startingPosition;
     bool playermoving;
     // Start is called before the first frame update
     void Start()
     {
         rocketRigidBody = GetComponent<Rigidbody2D>();
-    
+       // rocketMovement = startingPosition;
     }
 
     // Update is called once per frame
@@ -25,11 +25,19 @@ public class Rocket : MonoBehaviour
 
 
     }
+   
     private void FixedUpdate()
     {
 
           transform.position = transform.position + new Vector3(rocketMovement.x * Time.deltaTime, rocketMovement.y * Time.deltaTime,0);
-     
     }
-    
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "rock")
+        {   
+           
+            gameObject.transform.position = startingPosition;
+        }
+    }
+
 }  
