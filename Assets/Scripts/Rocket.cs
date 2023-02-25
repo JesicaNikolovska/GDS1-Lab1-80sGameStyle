@@ -38,6 +38,11 @@ public class Rocket : MonoBehaviour
            
             gameObject.transform.position = startingPosition;
         }
+
+        if(other.gameObject.tag == "astro")
+        {
+          //  GetComponent
+        }
     }
 
 }  
