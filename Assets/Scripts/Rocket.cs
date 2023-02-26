@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
@@ -47,6 +48,7 @@ public class Rocket : MonoBehaviour
            
             gameObject.transform.position = startingPosition;
             astro.SetActive(false);
+            SceneManager.LoadScene("GameOver");
         }
 
         if (other.gameObject.tag == "astro")
