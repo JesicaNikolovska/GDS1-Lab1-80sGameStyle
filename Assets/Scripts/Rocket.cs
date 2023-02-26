@@ -29,8 +29,11 @@ public class Rocket : MonoBehaviour
     {
         rocketMovement.y = Input.GetAxis("Vertical") * rocketSpeed;
         rocketMovement.x = Input.GetAxis("Horizontal") * rocketSpeed;
-        
-        
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("Lab1-80s");
+        }
         
 
 
