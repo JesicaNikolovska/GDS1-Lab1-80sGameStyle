@@ -11,6 +11,8 @@ public class Rocket : MonoBehaviour
     public GameObject rocket;
     bool playermoving;
     public GameObject astro;
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,22 +46,31 @@ public class Rocket : MonoBehaviour
         {   
            
             gameObject.transform.position = startingPosition;
+            astro.SetActive(false);
         }
 
-        if(other.gameObject.tag == "astro")
-         {
-           //  other.transform.position = Vector2.MoveTowards(transform.position, gameObject.transform.position, 5f);
-             Destroy(other.gameObject);
+        if (other.gameObject.tag == "astro")
+        {
+            //  other.transform.position = Vector2.MoveTowards(transform.position, gameObject.transform.position, 5f);
+            Destroy(other.gameObject);
 
             //gameObject.transform.position;
             //gameObject.transform.position = startingPosition;
             // for (int i = 0; i > 0; i++) {
             // astro.enabled = false;
             astro.SetActive(true);
-        } 
-        
+        }
+
+        if (other.gameObject.tag == "planet")
+        {
+
+            astro.SetActive(false);
             
+        }
         
+
+
+
     }
 
 }  
