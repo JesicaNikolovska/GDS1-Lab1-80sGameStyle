@@ -56,9 +56,15 @@ public class Rocket : MonoBehaviour
 
         if (other.gameObject.tag == "astro")
         {
-            //  other.transform.position = Vector2.MoveTowards(transform.position, gameObject.transform.position, 5f);
-            Destroy(other.gameObject);
+            //if (pick up count system is lower then 3)
+            //then destory. 
 
+            //if (pick up count System == 3) 
+            //DO NOT DESTORY
+
+            
+            Destroy(other.gameObject);
+            //  other.transform.position = Vector2.MoveTowards(transform.position, gameObject.transform.position, 5f);
             //gameObject.transform.position;
             //gameObject.transform.position = startingPosition;
             // for (int i = 0; i > 0; i++) {
@@ -70,12 +76,22 @@ public class Rocket : MonoBehaviour
         {
 
             astro.SetActive(false);
-            
+            //If pick up system == 1 
+            //take points and restart pick up. 
+
+            //If pick up system == 2 
+            //take points and restart pick up.
+
+            //If pick up system == 3 
+            //take points and restart pick up.
+
         }
-        
-
-
 
     }
+
+    //Method for pick up system
+    //assign astronauts a point value.
+    //rocket can only hold 3 astronauts. 
+    //if rocket reaches 3 can not hold more. 
 
 }  
