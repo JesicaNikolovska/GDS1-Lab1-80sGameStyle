@@ -140,5 +140,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   astroRigidBody: {fileID: 0}
-  pointCollection: 100
+  pointCollection: 1
   theGameControl: {fileID: 0}

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class ControlForGame : MonoBehaviour
 {
@@ -47,6 +49,10 @@ public class ControlForGame : MonoBehaviour
 
         sText.text = savedText.text;
         changeText2();
+        if(score2 >= 5)
+        {
+            SceneManager.LoadScene("YouWin");
+        }
         
 
     }

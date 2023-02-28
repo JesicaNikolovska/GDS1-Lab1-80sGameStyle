@@ -30,7 +30,7 @@ public class AstronautSpawning : MonoBehaviour
 
     void spawning()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 6; i++)
         {
             Vector3 randPos = new Vector3(Random.Range(minPos.x, MaxPos.x), Random.Range(minPos.y, MaxPos.y), Random.Range(minPos.z, MaxPos.z));
             GameObject astro = Instantiate(astroSpawn, randPos, Quaternion.identity);
