@@ -17,7 +17,7 @@ public class Rocket : MonoBehaviour
     public int pointCollection3;
     public ControlForGame theGameControl;
     public AstronautSpawning spawning;
-
+    public AudioSource pickUpAudio;
 
 
 
@@ -89,7 +89,8 @@ public class Rocket : MonoBehaviour
             // theGameControl.addpointSystem4();
             if (theGameControl.score3 < 4)
             {
-             //heGameControl.addpointSystem4();
+                //heGameControl.addpointSystem4();
+                pickUpAudio.Play();
                 Destroy(other.gameObject);
                 astro.SetActive(true);
             }
