@@ -12,7 +12,13 @@ public class Rocket : MonoBehaviour
     public GameObject rocket;
     bool playermoving;
     public GameObject astro;
-   
+    public int pointCollection;
+    public int pointCollection2;
+    public ControlForGame theGameControl;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +28,10 @@ public class Rocket : MonoBehaviour
         // astro.enabled = true;
         // rocketMovement = startingPosition;
         astro.SetActive(false);
-    }
+
+        theGameControl = GameObject.Find("Gamemanager").GetComponent<ControlForGame>();
+
+}
 
     // Update is called once per frame
     void Update()
@@ -61,8 +70,7 @@ public class Rocket : MonoBehaviour
 
             //if (pick up count System == 3) 
             //DO NOT DESTORY
-
-            
+           // theGameControl.AddPointSystem(pointCollection);
             Destroy(other.gameObject);
             //  other.transform.position = Vector2.MoveTowards(transform.position, gameObject.transform.position, 5f);
             //gameObject.transform.position;
@@ -76,8 +84,12 @@ public class Rocket : MonoBehaviour
         {
 
             astro.SetActive(false);
-            //If pick up system == 1 
-            //take points and restart pick up. 
+           theGameControl.AddPointSystem2(pointCollection2);
+            theGameControl.addPointSystem3(pointCollection);
+
+
+    //If pick up system == 1 
+    //take points and restart pick up. 
 
             //If pick up system == 2 
             //take points and restart pick up.

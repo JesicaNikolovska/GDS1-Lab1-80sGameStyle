@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6429708491257364532}
   - component: {fileID: 1443014104870819157}
+  - component: {fileID: 372607422}
   m_Layer: 0
   m_Name: astro
   m_TagString: Player
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3838452958222414465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.25, y: 0.62, z: 0}
-  m_LocalScale: {x: 0.1849, y: 0.1849, z: 0.1849}
+  m_LocalScale: {x: 0.48982838, y: 0.45112586, z: 0.6047264}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: fccea2e264658964ab123ec76a235d9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82,3 +83,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &372607422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3838452958222414465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db39a10360cde54facaee8c98b8c205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rocketSpeed: 0
+  startingPosition: {x: 0, y: 0, z: 0}
+  rocket: {fileID: 0}
+  astro: {fileID: 0}
