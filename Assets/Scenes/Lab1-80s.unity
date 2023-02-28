@@ -678,8 +678,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   score2: 0
+  score3: 0
   sText: {fileID: 513641956}
   savedText: {fileID: 464952169}
+  astroMan: {fileID: 2122714678}
 --- !u!4 &492224003
 Transform:
   m_ObjectHideFlags: 0
@@ -1917,8 +1919,11 @@ MonoBehaviour:
   startingPosition: {x: -7.27, y: 0.81, z: -1.053821}
   rocket: {fileID: 1972360185}
   astro: {fileID: 372607419}
-  pointCollection: 100
+  pointCollection: 1
+  pointCollection2: 0
+  pointCollection3: 0
   theGameControl: {fileID: 0}
+  spawning: {fileID: 0}
 --- !u!50 &1972360190
 Rigidbody2D:
   serializedVersion: 4

@@ -14,7 +14,9 @@ public class Rocket : MonoBehaviour
     public GameObject astro;
     public int pointCollection;
     public int pointCollection2;
+    public int pointCollection3;
     public ControlForGame theGameControl;
+    public AstronautSpawning spawning;
 
 
 
@@ -70,14 +72,38 @@ public class Rocket : MonoBehaviour
 
             //if (pick up count System == 3) 
             //DO NOT DESTORY
-           // theGameControl.AddPointSystem(pointCollection);
-            Destroy(other.gameObject);
+            // theGameControl.AddPointSystem(pointCollection);
+            //     Destroy(other.gameObject);
             //  other.transform.position = Vector2.MoveTowards(transform.position, gameObject.transform.position, 5f);
             //gameObject.transform.position;
             //gameObject.transform.position = startingPosition;
             // for (int i = 0; i > 0; i++) {
             // astro.enabled = false;
-            astro.SetActive(true);
+            //     astro.SetActive(true);
+            // if(pointCollection2 <= 3)
+            // {
+            //   theGameControl.addPointSystem4(pointCollection3);
+
+            theGameControl.addpointSystem4(pointCollection3);
+
+            // theGameControl.addpointSystem4();
+            if (theGameControl.score3 < 4)
+            {
+             //heGameControl.addpointSystem4();
+                Destroy(other.gameObject);
+                astro.SetActive(true);
+            }
+           
+           //f(theGameControl.score == 3)
+           //
+           //   Destroy(other.gameObject);
+           //// astro.SetActive(true);
+          //}
+           
+                
+            
+            
+          //  }
         }
 
         if (other.gameObject.tag == "planet")
@@ -86,10 +112,11 @@ public class Rocket : MonoBehaviour
             astro.SetActive(false);
            theGameControl.AddPointSystem2(pointCollection2);
             theGameControl.addPointSystem3(pointCollection);
+            theGameControl.addPointSystem3(pointCollection3);
 
 
-    //If pick up system == 1 
-    //take points and restart pick up. 
+            //If pick up system == 1 
+            //take points and restart pick up. 
 
             //If pick up system == 2 
             //take points and restart pick up.

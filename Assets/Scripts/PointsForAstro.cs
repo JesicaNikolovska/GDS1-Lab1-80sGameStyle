@@ -24,7 +24,12 @@ public class PointsForAstro : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+
+          
              theGameControl.AddPointSystem(pointCollection);
+            
+            
+           
 
         }
         
