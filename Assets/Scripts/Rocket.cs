@@ -127,6 +127,12 @@ public class Rocket : MonoBehaviour
 
         }
 
+        if(other.gameObject.tag == "Alien")
+        {
+            SceneManager.LoadScene("GameOver");
+
+        }
+
     }
 
     //Method for pick up system
