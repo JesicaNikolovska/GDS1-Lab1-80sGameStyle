@@ -11,6 +11,7 @@ public class AstroPickup : MonoBehaviour
     bool playermoving;
   //  private SpriteRenderer astro;
     public GameObject astro;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -41,8 +42,10 @@ public class AstroPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "planet")
         {
-
+            
             astro.SetActive(false);
+            
+
         }
 
        // if (other.gameObject.tag == "astro")

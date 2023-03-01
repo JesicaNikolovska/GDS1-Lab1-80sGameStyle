@@ -15,6 +15,7 @@ public class ControlForGame : MonoBehaviour
     public Text savedText;
     public GameObject astroMan;
    
+   
     void Start()
     {
         changeText();
@@ -88,6 +89,7 @@ public class ControlForGame : MonoBehaviour
         score = 0;
         score3 = 0;
         changeText();
+       
     }
 
     public void addpointSystem4(int point)
